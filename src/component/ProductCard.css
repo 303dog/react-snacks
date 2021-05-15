@@ -1,0 +1,44 @@
+
+
+.pc__container {
+    background-color: #282c34;
+    border: 3px solid red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(3px + 2vmin);
+    color: white;
+}
+
+.pc__main {
+    content: justify;
+    border-radius: 5px;
+    background-color: rgb(62, 66, 80);
+    padding: 10px;
+    width: 375px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: .25%;
+    color: white;
+}
+
+.pc__total {
+    display: justify;
+    border: 2px solid #04aa60;
+}
+
+.pc__col25 {
+    float: left;
+    
+    margin-top: 1px;
+  }
+
+.pc__col75 {
+    background-color:  rgb(62, 66, 80);
+    float: left;
+    width: 100%;
+    margin-top: 1px;
+  }
