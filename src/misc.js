@@ -102,3 +102,13 @@ class Sum extends React.Component {
       );
     }
   }
+
+
+
+  {products.map((product, i) => (
+    <div key={i}>
+      <label>{product.title}</label>
+      {product.count > 0 && product.map((item, i) => (
+        <li>{item.count}</li>
+      ))}
+    </div>

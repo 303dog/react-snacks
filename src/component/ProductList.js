@@ -11,25 +11,24 @@ import React from 'react'
           <form>
             {products.map((product, i) => (
               <div className='auto__row'>
-                <div className='auto__col25'>
+                <div className='auto__col25' key={i}>
                   <label>{product.title}</label>
                 </div>
-                <div className='auto__col75' key={i}>
+                <div className='auto__col75'>
                   {product.size}
                 </div>
-  
                 <input
                   className='auto__input'
                   type='text'
                   value={product.count}
                   onChange={(e) => onChange(i, parseInt(e.target.value) || 0)}
-                />
+                  />
               </div>
             ))}
           </form>
      
-        </fieldset>
-      
+     </fieldset>
+     
       </div>
     </>
   );
