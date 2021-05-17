@@ -16,8 +16,8 @@ class ProductCard extends React.Component {
     
         Great
         <div className='pc__main'>
-     <Products />
-     
+        <Products />  
+      
 
         </div>
         </div>

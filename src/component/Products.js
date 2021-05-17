@@ -2,6 +2,7 @@ import React from 'react';
 import ProductList from './ProductList';
 import './Products.css';
 import Total from './Total';
+import Ordered from './OrderedItem'
 
 
 
@@ -66,10 +67,6 @@ class Products extends React.Component {
      )
    }
 
-        
-    
-    
-  
     render() {
       
       return (
@@ -81,7 +78,8 @@ class Products extends React.Component {
             />
             <Total products={this.state.products} />
             <button onClick={this.onSubmit}>Submit</button>
-            <div>{this.usersOrder()}</div>
+            <Ordered
+            products={this.state.products.filter((item) => item.count > 0)} />
           </div>
         </>
       );

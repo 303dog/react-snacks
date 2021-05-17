@@ -1,8 +1,8 @@
 
 
 .pc__container {
-    background-color: #282c34;
-    border: 3px solid red;
+    background-color: #ffff;
+    border: 6px solid #ad0000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,10 +12,23 @@
     color: white;
 }
 
+fieldset {
+    border-width: 10px ;
+    border-color: #ad0000;
+    margin-bottom: 1%;
+
+}
+
+legend {
+    font-size: 25px;
+    color: #ffff;
+}
+
 .pc__main {
     content: justify;
     border-radius: 5px;
-    background-color: rgb(62, 66, 80);
+    background-color: #103c7f;
+    border: 6px solid #ad0000;
     padding: 10px;
     width: 375px;
     margin-right: auto;
@@ -25,20 +38,31 @@
     color: white;
 }
 
+button {
+    display: justify;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .pc__total {
     display: justify;
-    border: 2px solid #04aa60;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .pc__col25 {
     float: left;
-    
     margin-top: 1px;
-  }
+}
 
 .pc__col75 {
     background-color:  rgb(62, 66, 80);
     float: left;
     width: 100%;
     margin-top: 1px;
-  }
+    
+}
