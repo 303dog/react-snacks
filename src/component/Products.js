@@ -9,16 +9,16 @@ import Ordered from './OrderedItem'
 class Products extends React.Component {
     state = {
       products: [
-        { id: 1, title: "Color Labels", size: '12"x18"', count: 0, price: 2.5 },
-        { id: 2, title: "Color Labels", size: '11"x17"', count: 0, price: 1.75 },
-        { id: 3, title: "Color Labels", size: '8.5"x11"', count: 0, price: 2.75 },
-        { id: 4, title: "Color Labels", size: '8.5"x5.5"', count: 0, price: 2.5 },
-        { id: 5, title: "Color Labels", size: '4.25"x5.5"', count: 0, price: 1.75 },
-        { id: 6, title: "Standard Labels", size: '12"x18"', count: 0, price: 2.8 },
-        { id: 7, title: "Standard Labels", size: '11"x17"', count: 0, price: 2.5 },
-        { id: 8, title: "Standard Labels", size: '8.5"x11"', count: 0, price: 1.75 },
-        { id: 9, title: "Standard Labels", size: '8.5"x5.5"', count: 0, price: 2.75 },
-        { id: 10, title: "Standard Labels", size: '4.25"x5.5"', count: 0, price: 2.75 },
+        { id: 1, title: "Color Label", size: '12"x18"', count: 0, price: 2.5 },
+        { id: 2, title: "Color Label", size: '11"x17"', count: 0, price: 1.75 },
+        { id: 3, title: "Color Label", size: '8.5"x11"', count: 0, price: 2.75 },
+        { id: 4, title: "Color Label", size: '8.5"x5.5"', count: 0, price: 2.5 },
+        { id: 5, title: "Color Label", size: '4.25"x5.5"', count: 0, price: 1.75 },
+        { id: 6, title: "Standard Label", size: '12"x18"', count: 0, price: 2.8 },
+        { id: 7, title: "Standard Label", size: '11"x17"', count: 0, price: 2.5 },
+        { id: 8, title: "Standard Label", size: '8.5"x11"', count: 0, price: 1.75 },
+        { id: 9, title: "Standard Label", size: '8.5"x5.5"', count: 0, price: 2.75 },
+        { id: 10, title: "Standard Label", size: '4.25"x5.5"', count: 0, price: 2.75 },
       ],
       cost: 0, 
       orderedItems: [] // NOT USEing
@@ -42,7 +42,7 @@ class Products extends React.Component {
       this.setState({
         cost: owed$,
         products: this.state.products.map((product, i) => i === index ? { ...product, count: e.target.value } : product),
-      });  //trying  to render orderedItems, not working
+      }); 
     };
 
     componentDidUpdate(prevProps, prevState) {
@@ -51,6 +51,7 @@ class Products extends React.Component {
       }
 };
 
+// maps over items to find count > 0 that user selected provides 'props' to OrderedItem.js
   usersOrder()  {
     return (
       console.log(this.state.products),
@@ -68,7 +69,6 @@ class Products extends React.Component {
    }
 
     render() {
-      
       return (
         <>
           <div className='auto__main'>
@@ -77,9 +77,9 @@ class Products extends React.Component {
               onChange={this.onChange}
             />
             <Total products={this.state.products} />
-            <button onClick={this.onSubmit}>Submit</button>
             <Ordered
             products={this.state.products.filter((item) => item.count > 0)} />
+            <button onClick={this.onSubmit}>Submit</button>
           </div>
         </>
       );

@@ -1,36 +1,29 @@
+import React from "react";
 
-import React from 'react'
-
-
-
-  const ProductList = ({ products, onChange }) => (
-    <>
-      <div className='auto__container'>
-        <fieldset>
-          <legend>Build Your Order</legend>
-          <form>
-            {products.map((product, i) => (
-              <div className='auto__row'>
-                <div className='auto__col25' key={i}>
-                  <label>{product.title}</label>
-                </div>
-                <div className='auto__col75'>
-                  {product.size}
-                </div>
-                <input
-                  className='auto__input'
-                  type='text'
-                  value={product.count}
-                  onChange={(e) => onChange(i, parseInt(e.target.value) || 0)}
-                  />
+const ProductList = ({ products, onChange }) => (
+  <>
+    <div className='auto__container'>
+      <fieldset>
+        <legend>Build Your Order</legend>
+        <form>
+          <div className='auto__row'>
+          {products.map((product, i) => (
+              <div className='auto__col25' key={i}>
+                <label>{product.title}</label>
+              <div className='auto__col75'>{product.size}</div>
+              <input
+                className='auto__input'
+                type='text'
+                value={product.count}
+                onChange={(e) => onChange(i, parseInt(e.target.value) || 0)}
+                />
               </div>
-            ))}
-          </form>
-     
-     </fieldset>
-     
-      </div>
-    </>
-  );
+              ))}
+              </div>
+        </form>
+      </fieldset>
+    </div>
+  </>
+);
 
-  export default ProductList;
+export default ProductList;

@@ -16,12 +16,12 @@ fieldset {
     border-width: 10px ;
     border-color: #ad0000;
     margin-bottom: 1%;
-
+    
 }
 
 legend {
-    font-size: 25px;
     color: #ffff;
+    font-size: calc(9px + 2vmin);
 }
 
 .pc__main {
@@ -52,6 +52,7 @@ button {
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: calc(7px + 1.5vmin);
 }
 
 .pc__col25 {
